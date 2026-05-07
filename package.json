@@ -1,0 +1,9 @@
+{
+  "name": "aula1-grupo-dicas",
+  "version": "1.0.0",
+  "description": "Página de captura da aula 1 do Curso Grupo Dicas",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Aula 1 Gratuita — Curso Grupo Dicas</title>
+<meta name="description" content="Aula gratuita: como ganhar muito dinheiro com conteúdo de viagem. Cadastre-se e receba acesso imediato à primeira aula do Curso Grupo Dicas." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aula1.grupodicas.com" />
+<meta property="og:title" content="Aula 1 GRATUITA — Curso Grupo Dicas" />
+<meta property="og:description" content="Cadastre-se e receba acesso imediato à primeira aula do curso. 100% gratuito." />
+<meta property="og:image" content="https://aula1.grupodicas.com/imgs/thumb-video.jpg" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="900" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Grupo Dicas" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Aula 1 GRATUITA — Curso Grupo Dicas" />
+<meta name="twitter:description" content="Cadastre-se e receba acesso imediato à primeira aula do curso. 100% gratuito." />
+<meta name="twitter:image" content="https://aula1.grupodicas.com/imgs/thumb-video.jpg" />
+
+<meta name="theme-color" content="#E91E8C" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="imgs/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --pink: #E91E8C;
+    --pink-soft: #fce4f0;
+    --cyan: #3CCBE8;
+    --cyan-dark: #1ba8c5;
+    --cyan-soft: #e0f7fc;
+    --purple: #5B2F92;
+    --purple-deep: #2d1654;
+    --ink: #1a1226;
+    --ink-soft: #4a3c5e;
+    --ink-mute: #847593;
+    --bg: #ffffff;
+    --bg-soft: #fafafe;
+    --line: #ece8f3;
+    --shadow: 0 6px 28px rgba(91, 47, 146, 0.08);
+    --shadow-lg: 0 24px 70px rgba(91, 47, 146, 0.16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    overflow-x: hidden;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .container-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* TYPOGRAPHY */
+  .display {
+    font-size: clamp(2rem, 5.5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+  }
+
+  .h2 {
+    font-size: clamp(1.75rem, 3.6vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  .lead {
+    font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .pink-text { color: var(--pink); }
+  .cyan-text { color: var(--cyan-dark); }
+  .purple-text { color: var(--purple); }
+
+  /* HEADER MÍNIMO (só logo, sem distrações) */
+  .header {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    background: white;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    display: flex; align-items: center;
+    height: 28px;
+  }
+  .logo img {
+    height: 100%;
+    width: auto;
+  }
+  @media (max-width: 600px) {
+    .logo { height: 22px; }
+  }
+
+  /* HERO + FORMULÁRIO */
+  .hero {
+    padding: 50px 0 70px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #fefbff 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(60, 203, 232, 0.15), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -200px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.12), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding: 36px 0 50px; }
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(233, 30, 140, 0.25);
+    text-transform: uppercase;
+  }
+
+  .hero-headline {
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+
+  .hero-sub {
+    color: var(--ink-soft);
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+
+  .hero-bullets {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+
+  .hero-bullets li {
+    padding: 8px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  .hero-bullets li::before {
+    content: '✓';
+    color: var(--pink);
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  /* CARD DO FORMULÁRIO */
+  .form-card {
+    background: white;
+    border-radius: 24px;
+    padding: 36px 32px;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid transparent;
+    background-image:
+      linear-gradient(white, white),
+      linear-gradient(135deg, var(--pink), var(--cyan), var(--purple));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    position: relative;
+  }
+
+  @media (max-width: 600px) {
+    .form-card { padding: 28px 22px; border-radius: 18px; }
+  }
+
+  .form-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(91, 47, 146, 0.18);
+  }
+
+  .form-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .form-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+  }
+
+  .form-thumb-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: rgba(233, 30, 140, 0.95);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+  }
+
+  .form-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .form-subtitle {
+    color: var(--ink-mute);
+    font-size: 14px;
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+
+  .form-field {
+    margin-bottom: 14px;
+  }
+
+  .form-field input {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1.5px solid var(--line);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    background: #fafafc;
+    color: var(--ink);
+    transition: all 0.2s;
+    outline: none;
+  }
+
+  .form-field input::placeholder {
+    color: var(--ink-mute);
+    font-weight: 400;
+  }
+
+  .form-field input:focus {
+    border-color: var(--pink);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.1);
+  }
+
+  .form-button {
+    width: 100%;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 12px 28px rgba(233, 30, 140, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(233, 30, 140, 0.45);
+  }
+
+  .form-button:active {
+    transform: translateY(0);
+  }
+
+  .form-button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  .form-trust {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+  }
+
+  .form-trust strong {
+    color: var(--pink);
+    font-weight: 700;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 80px 0;
+    position: relative;
+  }
+
+  @media (max-width: 700px) {
+    section { padding: 60px 0; }
+  }
+
+  .section-soft {
+    background: linear-gradient(180deg, var(--bg-soft) 0%, white 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    background: var(--pink-soft);
+    color: var(--pink);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  /* "O QUE VOCÊ VAI APRENDER" */
+  .learnings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
+    .learnings-grid { grid-template-columns: 1fr; gap: 14px; }
+  }
+
+  .learning {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 24px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    transition: all 0.3s;
+  }
+
+  .learning:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--pink-soft);
+  }
+
+  .learning-icon {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--pink-soft), var(--cyan-soft));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .learning-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .learning-content p {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* AUTORIDADE */
+  .authority {
+    background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple) 100%);
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .authority::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(60, 203, 232, 0.2), transparent 70%);
+    border-radius: 50%;
+  }
+
+  .authority-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  @media (max-width: 800px) {
+    .authority-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .authority-photo {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    aspect-ratio: 4/5;
+  }
+
+  .authority-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .authority-content h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .authority-content h2 span {
+    background: linear-gradient(135deg, var(--pink), var(--cyan));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .authority-content p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .authority-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  @media (max-width: 500px) {
+    .authority-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  }
+
+  .auth-stat-num {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 800;
+    color: var(--cyan);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .auth-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* CTA FINAL */
+  .final-cta {
+    background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
+    text-align: center;
+    color: white;
+  }
+
+  .final-cta h2 {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .final-cta p {
+    color: rgba(255,255,255,0.9);
+    font-size: 17px;
+    margin-bottom: 36px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .final-form {
+    max-width: 480px;
+    margin: 0 auto;
+    background: white;
+    padding: 28px 24px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 36px 0;
+    background: white;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .footer-logo img {
+    height: 24px;
+    width: auto;
+    margin: 0 auto 14px;
+  }
+
+  .footer-text {
+    color: var(--ink-mute);
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ANIMAÇÕES */
+  .pulse {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER (só logo, sem distrações) -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="imgs/logo-curso.jpg" alt="Curso Grupo Dicas" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO COM FORMULÁRIO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Coluna esquerda: copy -->
+      <div>
+        <div class="hero-tag">🎁 Aula 1 liberada · 100% gratuita</div>
+        <h1 class="display hero-headline">
+          Como ganhar muito dinheiro com <span class="gradient-text">conteúdo de viagem.</span>
+        </h1>
+        <p class="hero-sub">
+          Receba acesso imediato à <strong>aula 1 completa</strong> do Curso Grupo Dicas.
+          Sem pegadinha, sem cartão, sem cobrança.
+        </p>
+
+        <ul class="hero-bullets">
+          <li>O modelo de negócio que faturou +R$ 548 mil/mês</li>
+          <li>Por que você NÃO precisa viajar pra começar</li>
+          <li>Como funciona a curva real de crescimento</li>
+          <li>Os 3 perfis que se dão bem nesse mercado</li>
+        </ul>
+      </div>
+
+      <!-- Coluna direita: card com formulário -->
+      <div>
+        <div class="form-card">
+          <div class="form-thumb">
+            <img src="imgs/thumb-video.jpg" alt="Aula 1 do Curso Grupo Dicas" />
+            <div class="form-thumb-badge">▶ Aula 1 · grátis</div>
+          </div>
+
+          <h3 class="form-title">Receba a aula agora 👇</h3>
+          <p class="form-subtitle">Preencha os dados e você terá acesso imediato no e-mail.</p>
+
+          <!--
+            ============================================
+            FORMULÁRIO DE CAPTURA
+            ============================================
+            Substitua "action" pela URL da sua plataforma de email marketing.
+            Exemplos:
+            - ActiveCampaign: https://[suaconta].activehosted.com/proc.php
+            - MailerLite: https://assets.mailerlite.com/jsonp/[ID]/forms/[ID]/subscribe
+            - Mailchimp: https://[lista].us1.list-manage.com/subscribe/post
+
+            Os names dos campos podem precisar de ajuste pra cada plataforma.
+            ============================================
+          -->
+          <form action="/api/capturar-aula1" method="POST" id="captureForm">
+            <!-- Honeypot anti-spam: bots preenchem, humanos não veem -->
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+            <div class="form-field">
+              <input type="text" name="name" placeholder="Seu nome" required />
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+            </div>
+            <div class="form-field">
+              <input type="tel" name="phone" placeholder="WhatsApp (com DDD)" required />
+            </div>
+            <button type="submit" class="form-button pulse">
+              Quero acessar a aula agora
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </form>
+
+          <p class="form-trust">
+            🔒 Seus dados estão seguros · <strong>100% gratuito</strong> · Sem spam
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ VAI APRENDER -->
+<section class="section-soft">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">⚡ Conteúdo da aula</span>
+      <h2 class="h2">O que você <span class="gradient-text">vai aprender</span></h2>
+    </div>
+
+    <div class="learnings-grid">
+      <div class="learning">
+        <div class="learning-icon">🎯</div>
+        <div class="learning-content">
+          <h4>Como funciona o modelo</h4>
+          <p>O negócio real de ganhar dinheiro com conteúdo de viagem. Sem promessa milagrosa.</p>
+        </div>
+      </div>
+
+      <div class="learning">
+        <div class="learning-icon">🏠</div>
+        <div class="learning-content">
+          <h4>Você não precisa viajar</h4>
+          <p>Por que muitos creators de viagem produzem do quarto e vendem mais que quem está na estrada.</p>
+        </div>
+      </div>
+
+      <div class="learning">
+        <div class="learning-icon">📈</div>
+        <div class="learning-content">
+          <h4>O efeito bola de neve</h4>
+          <p>Como esse negócio cresce de forma exponencial — e por que a maioria desiste antes de chegar lá.</p>
+        </div>
+      </div>
+
+      <div class="learning">
+        <div class="learning-icon">👥</div>
+        <div class="learning-content">
+          <h4>Pra qual perfil você se encaixa</h4>
+          <p>Os 3 tipos de pessoa que se dão bem nesse mercado — e o ritmo de cada um.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE -->
+<section class="authority">
+  <div class="container">
+    <div class="authority-grid">
+      <div class="authority-photo">
+        <img src="imgs/gabriel-maldivas.jpg" alt="Gabriel Lorenzi" />
+      </div>
+      <div class="authority-content">
+        <h2>Quem te ensina é <span>Gabriel Lorenzi</span></h2>
+        <p>
+          Há 20 anos construindo o <strong style="color: white;">Grupo Dicas</strong> — uma das maiores
+          operações de conteúdo de viagem do Brasil. Sedes em São Paulo e Orlando, equipe de 28 pessoas,
+          conteúdo em 6 idiomas.
+        </p>
+        <p>
+          Nessa aula, ele abre os bastidores de um método guardado por duas décadas — e te mostra como
+          começar a aplicar agora, do jeito certo.
+        </p>
+
+        <div class="authority-stats">
+          <div>
+            <div class="auth-stat-num">+R$ 548K</div>
+            <div class="auth-stat-label">Por mês</div>
+          </div>
+          <div>
+            <div class="auth-stat-num">+10M</div>
+            <div class="auth-stat-label">Views/mês</div>
+          </div>
+          <div>
+            <div class="auth-stat-num">20</div>
+            <div class="auth-stat-label">Anos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL COM FORMULÁRIO DE NOVO -->
+<section class="final-cta">
+  <div class="container-narrow">
+    <h2 class="h2">Pega sua aula agora.</h2>
+    <p>Não tem custo, não tem cartão, não tem pegadinha. É só preencher e receber no e-mail.</p>
+
+    <div class="final-form">
+      <!-- Mesmo formulário, repetido pra capturar quem chegou até o fim -->
+      <form action="/api/capturar-aula1" method="POST" id="captureFormBottom">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+        <div class="form-field">
+          <input type="text" name="name" placeholder="Seu nome" required />
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+        </div>
+        <div class="form-field">
+          <input type="tel" name="phone" placeholder="WhatsApp (com DDD)" required />
+        </div>
+        <button type="submit" class="form-button">
+          Quero a aula agora
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </form>
+
+      <p class="form-trust" style="margin-top: 14px;">
+        🔒 Seus dados estão seguros · <strong>100% gratuito</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="imgs/logo-curso.jpg" alt="Curso Grupo Dicas" />
+    </div>
+    <p class="footer-text">
+      © 2026 Curso Grupo Dicas · Conteúdo educacional · Os resultados podem variar conforme a aplicação
+      do conteúdo, dedicação e perfil de cada pessoa. Não garantimos ganhos específicos.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Máscara de telefone
+  document.querySelectorAll('input[name="phone"]').forEach(input => {
+    input.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.slice(0, 11);
+      if (v.length > 6) {
+        v = v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+      } else if (v.length > 2) {
+        v = v.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+      } else if (v.length > 0) {
+        v = v.replace(/^(\d{0,2})/, '($1');
+      }
+      e.target.value = v;
+    });
+  });
+
+  // Captura UTM params da URL pra rastrear origem
+  function getOrigem() {
+    const params = new URLSearchParams(window.location.search);
+    const utm_source = params.get('utm_source') || params.get('source');
+    if (utm_source) return utm_source.toLowerCase();
+    const ref = document.referrer;
+    if (ref.includes('instagram')) return 'instagram';
+    if (ref.includes('facebook')) return 'facebook';
+    if (ref.includes('google')) return 'google';
+    if (ref.includes('youtube')) return 'youtube';
+    if (ref.includes('tiktok')) return 'tiktok';
+    return 'organico';
+  }
+
+  // Submit dos formulários
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const button = form.querySelector('button[type="submit"]');
+      const originalText = button.innerHTML;
+
+      // Loading state
+      button.disabled = true;
+      button.innerHTML = 'Enviando... ⏳';
+      button.style.opacity = '0.7';
+      button.style.cursor = 'wait';
+
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        origem: getOrigem(),
+        website: formData.get('website') || '' // honeypot
+      };
+
+      try {
+        const response = await fetch('/api/capturar-aula1', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          // Sucesso → redireciona pra obrigado
+          window.location.href = '/obrigado.html?nome=' + encodeURIComponent(data.name.split(' ')[0]);
+        } else {
+          throw new Error(result.error || 'Erro ao enviar');
+        }
+      } catch (error) {
+        console.error('Erro:', error);
+        button.disabled = false;
+        button.innerHTML = originalText;
+        button.style.opacity = '';
+        button.style.cursor = '';
+
+        // Mostra erro discreto
+        let errorMsg = form.querySelector('.form-error');
+        if (!errorMsg) {
+          errorMsg = document.createElement('p');
+          errorMsg.className = 'form-error';
+          errorMsg.style.cssText = 'color:#dc2626;font-size:13px;margin-top:10px;text-align:center;';
+          form.appendChild(errorMsg);
+        }
+        errorMsg.textContent = '⚠️ ' + (error.message || 'Erro ao enviar. Tente novamente.');
+        setTimeout(() => errorMsg.remove(), 6000);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

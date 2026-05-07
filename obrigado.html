@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Sua aula está liberada — Curso Grupo Dicas</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#E91E8C" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --pink: #E91E8C;
+    --cyan: #3CCBE8;
+    --purple: #5B2F92;
+    --purple-deep: #2d1654;
+    --ink: #1a1226;
+    --ink-soft: #4a3c5e;
+    --ink-mute: #847593;
+    --bg: #ffffff;
+    --line: #ece8f3;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* HEADER */
+  .header {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .header img { height: 28px; }
+  @media (max-width: 600px) { .header img { height: 22px; } }
+
+  /* SUCCESS BANNER */
+  .success-banner {
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    padding: 50px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .success-banner::before {
+    content: '';
+    position: absolute;
+    top: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(60, 203, 232, 0.3), transparent 70%);
+    border-radius: 50%;
+  }
+  .success-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
+    border-radius: 50%;
+  }
+  .check-circle {
+    width: 80px; height: 80px;
+    background: rgba(255,255,255,0.15);
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+  }
+  .success-banner h1 {
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+    position: relative; z-index: 1;
+  }
+  .success-banner p {
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+    position: relative; z-index: 1;
+  }
+
+  /* VIDEO SECTION */
+  .video-section {
+    padding: 60px 0;
+  }
+  .video-frame {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(91, 47, 146, 0.18);
+    background: linear-gradient(135deg, var(--purple), var(--purple-deep));
+    margin-bottom: 32px;
+  }
+  .video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+    text-align: center;
+    padding: 24px;
+  }
+  .video-placeholder-icon {
+    font-size: 56px;
+    opacity: 0.9;
+  }
+  .video-placeholder-text {
+    font-size: 18px;
+    font-weight: 700;
+    max-width: 400px;
+  }
+  .video-placeholder-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    max-width: 360px;
+  }
+
+  /* INSTRUCTIONS */
+  .instructions {
+    background: #fafafe;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 32px;
+  }
+  .instructions h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .instructions ul {
+    list-style: none;
+    padding: 0;
+  }
+  .instructions li {
+    padding: 8px 0 8px 28px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    position: relative;
+  }
+  .instructions li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--pink);
+    font-weight: 800;
+    font-size: 16px;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 60px 0 80px;
+    text-align: center;
+    background: linear-gradient(180deg, white 0%, #fafafe 100%);
+  }
+  .cta-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .cta-section h2 span {
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .cta-section p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 36px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 0 12px 28px rgba(233, 30, 140, 0.35);
+    transition: all 0.2s;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(233, 30, 140, 0.45);
+  }
+  .btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 32px 24px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <img src="imgs/logo-curso.jpg" alt="Curso Grupo Dicas" />
+</header>
+
+<!-- BANNER DE SUCESSO -->
+<section class="success-banner">
+  <div class="check-circle">✓</div>
+  <h1 id="welcomeTitle">Sua aula está liberada!</h1>
+  <p>Verifique seu e-mail — também enviamos o link pra lá. Caso não encontre, dá uma olhada na caixa de spam ou promoções.</p>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="container">
+    <div class="video-frame" id="videoContainer">
+      <!-- AQUI VAI O EMBED DO VÍDEO QUANDO ESTIVER PRONTO -->
+      <!-- Substitua o conteúdo abaixo pelo iframe do Vimeo/YouTube -->
+      <!-- Exemplo Vimeo: <iframe src="https://player.vimeo.com/video/XXXXX" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">A aula será disponibilizada em breve</div>
+        <div class="video-placeholder-sub">Você receberá um e-mail assim que ela estiver no ar.</div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>📋 Como aproveitar melhor essa aula</h3>
+      <ul>
+        <li>Reserve <strong>30 minutos</strong> ininterruptos pra assistir com calma</li>
+        <li>Tenha <strong>papel e caneta</strong> ao lado pra anotar pontos importantes</li>
+        <li>Assista até o final — as informações mais valiosas estão nos últimos minutos</li>
+        <li>Se gostar do que viu, considere o curso completo (link logo abaixo)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA PRO CURSO COMPLETO -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Quer continuar e ter acesso aos <span>outros 9 módulos</span>?</h2>
+    <p>
+      Essa aula é apenas o módulo 1 de 10. No curso completo, eu abro 20 anos de método —
+      do zero ao seu primeiro R$ 25 mil/mês com conteúdo de viagem.
+    </p>
+    <a href="https://curso.grupodicas.com" class="btn">
+      Conhecer o curso completo
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 Curso Grupo Dicas · São Paulo · Orlando
+</footer>
+
+<script>
+  // Personaliza saudação se nome veio na URL
+  const params = new URLSearchParams(window.location.search);
+  const nome = params.get('nome');
+  if (nome) {
+    document.getElementById('welcomeTitle').textContent = `${nome}, sua aula está liberada!`;
+  }
+</script>
+
+</body>
+</html>
